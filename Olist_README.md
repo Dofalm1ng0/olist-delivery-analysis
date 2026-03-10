@@ -122,7 +122,7 @@ Update the file paths in Cell 1 to match your local dataset location.
 
 | File | Description |
 |---|---|
-| `Olist_Delivery_Analysis.ipynb` | Full analysis notebook — EDA, metrics, findings |
+| `Olist_Delivery_Analysis.ipynb` | Full analysis notebook - EDA, metrics, findings |
 | `olist_master.csv` | Order-level export (95,809 rows) for Tableau |
 | `state_performance.csv` | State-level aggregation |
 | `category_delay.csv` | Category-level aggregation |
