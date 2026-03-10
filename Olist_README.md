@@ -1,8 +1,8 @@
 # Olist E-Commerce: Delivery Performance Analysis
 
 **Tools:** Python · Pandas · NumPy · Tableau  
-**Dataset:** [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) — 95,000+ orders · 2016–2018  
-**Dashboard:** [Live Tableau Dashboard](#) *(replace with your Tableau Public URL)*
+**Dataset:** [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) - 95,000+ orders · 2016–2018  
+**Dashboard:** [Live Tableau Dashboard](https://public.tableau.com/app/profile/rajat.kumar1954/viz/OlistE-CommerceDeliveryPerformanceAnalysis/Dashboard?publish=yes)
 
 ---
 
@@ -22,13 +22,13 @@ Olist is a Brazilian e-commerce marketplace connecting sellers to customers acro
 
 ## Methodology
 
-1. **Data loading and inspection** — Loaded all 9 CSVs, identified null patterns and incorrect data types
-2. **Cleaning** — Converted 5 date columns from object to datetime; filtered to delivered orders only; dropped 24 rows with missing delivery dates
-3. **Metric engineering** — Built 5 core metrics: delivery_delay_days, is_late, actual_delivery_days, seller_processing_days, logistics_days
-4. **Merging** — Left-joined customers, items, products (with category translation), and reviews onto the delivered orders base; deduplicated to one row per order after items fan-out
-5. **EDA** — Headline metrics, state analysis, category analysis, seller vs logistics split, delay bucket vs review score, 1-star review rate by bucket, correlation analysis, monthly trend
-6. **Export** — 5 clean CSVs exported for Tableau visualisation
-7. **Dashboard** — 4-view Tableau dashboard published on Tableau Public
+1. **Data loading and inspection** - Loaded all 9 CSVs, identified null patterns and incorrect data types
+2. **Cleaning** - Converted 5 date columns from object to datetime; filtered to delivered orders only; dropped 24 rows with missing delivery dates
+3. **Metric engineering** - Built 5 core metrics: delivery_delay, is_late, actual_delivery_days, seller_days, logistic_days
+4. **Merging** - Left-joined customers, items, products (with category translation), and reviews onto the delivered orders base; deduplicated to one row per order after items fan-out
+5. **EDA** - Headline metrics, state analysis, category analysis, seller vs logistics split, delay bucket vs review score, 1-star review rate by bucket, correlation analysis, monthly trend
+6. **Export** - 5 clean CSVs exported for Tableau visualisation
+7. **Dashboard** - 4-view Tableau dashboard published on Tableau Public
 
 ---
 
@@ -76,10 +76,10 @@ Late rate spiked from 5.6% in January to **18.7% in March 2018** before recoveri
 
 | Priority | Action | Target |
 |---|---|---|
-| 1 — Immediate | Carrier performance audit for AL, MA, SE routes | Operations / Logistics |
-| 2 — 30 days | Seller SLA enforcement for office_furniture (9.9 day processing) | Seller Management |
-| 3 — 60 days | At-risk order early warning system at carrier handoff | Product / Engineering |
-| 4 — 90 days | Root cause investigation of Q1 2018 anomaly | Operations |
+| Immediate | Carrier performance audit for AL, MA, SE routes | Operations / Logistics |
+| 30 days | Seller SLA enforcement for office_furniture (9.9 day processing) | Seller Management |
+| 60 days | At-risk order early warning system at carrier handoff | Product / Engineering |
+| 90 days | Root cause investigation of Q1 2018 anomaly | Operations |
 
 ---
 
@@ -87,14 +87,13 @@ Late rate spiked from 5.6% in January to **18.7% in March 2018** before recoveri
 
 Four interactive views published on Tableau Public:
 
-- **State Map** — Brazil filled map coloured by late delivery rate
-- **Review by Delay Bucket** — Bar chart showing satisfaction collapse across 5 delivery timing buckets
-- **Top Categories by Late Rate** — Horizontal bar with avg delay severity overlay
-- **Monthly Trend** — Dual-axis line + bar showing late rate vs order volume 2016–2018
+- **State Map** - Brazil filled map coloured by late delivery rate
+- **Review by Delay Bucket** - Bar chart showing satisfaction collapse across 5 delivery timing buckets
+- **Top Categories by Late Rate** - Horizontal bar with avg delay severity overlay
+- **Monthly Trend** - Dual-axis line + bar showing late rate vs order volume 2016–2018
 
-[**View Live Dashboard →**](#) *(replace # with your Tableau Public URL)*
+[**View Live Dashboard →**](https://public.tableau.com/app/profile/rajat.kumar1954/viz/OlistE-CommerceDeliveryPerformanceAnalysis/Dashboard?publish=yes) 
 
-![Dashboard Preview](dashboard_preview.png)
 
 ---
 
